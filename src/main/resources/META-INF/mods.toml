@@ -1,0 +1,23 @@
+modLoader="javafml" #mandatory
+loaderVersion="[45,)" #mandatory
+license="All rights reserved"
+#issueTrackerURL="https://change.me.to.your.issue.tracker.example.invalid/" #optional
+[[mods]] #mandatory
+modId="vigilantbarnacle" #mandatory
+version="1.0" #mandatory
+displayName="Vigilant Barnacle" #mandatory
+
+# A URL to query for updates for this mod. See the JSON update specification https://docs.minecraftforge.net/en/latest/misc/updatechecker/
+#updateJSONURL="https://change.me.example.invalid/updates.json" #optional
+
+# A URL for the "homepage" for this mod, displayed in the mod UI
+#displayURL="https://change.me.to.your.mods.homepage.example.invalid/" #optional
+
+# A file name (in the root of the mod JAR) containing a logo for display
+# logoFile="examplemod.png" #optional
+
+credits="Thanks" #optional
+authors="A&E"
+description='''
+Valentina
+'''
