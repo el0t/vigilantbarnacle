@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "vigilantbarnacle:item/yggdrasil_leaf"
+  }
+}
