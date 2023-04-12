@@ -1,11 +1,13 @@
 package io.github.el0t.vigilantbarnacle;
 
 import com.mojang.logging.LogUtils;
+import io.github.el0t.vigilantbarnacle.init.BlockInit;
 import io.github.el0t.vigilantbarnacle.init.ItemInit;
 import net.minecraft.client.Minecraft;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.*;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -34,17 +36,16 @@ public class VigilantBarnacle
 
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
-        modEventBus.addListener(this::registerTabs);
-
-        // Register the Deferred Register to the mod event bus so things get registered
 
         // BLOCKS.register(modEventBus);
         ItemInit.ITEMS.register(modEventBus);
+        BlockInit.BLOCKS.register(modEventBus);
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
 
-        // Register the item to a creative tab
+        // Register creative tabs
+        modEventBus.addListener(this::registerTabs);
         modEventBus.addListener(this::addCreative);
     }
 
@@ -61,6 +62,7 @@ public class VigilantBarnacle
                 .title(Component.translatable("tabs.vigilantbarnacle.tab1"))
                 .displayItems((featureFlags, output) -> {
                     output.accept(ItemInit.ORICHALCUM.get());
+                    output.accept(BlockInit.ORICHALCUM_BLOCK.get());
                     output.accept(ItemInit.YGGDRASIL_LEAF.get());
                 }));
     }
