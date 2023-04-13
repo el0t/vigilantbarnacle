@@ -16,7 +16,7 @@ displayName="Vigilant Barnacle" #mandatory
 # A file name (in the root of the mod JAR) containing a logo for display
 # logoFile="examplemod.png" #optional
 
-credits="Thanks" #optional
+credits="Thanks to https://misode.github.io/" #optional
 authors="A&E"
 description='''
 Valentina
