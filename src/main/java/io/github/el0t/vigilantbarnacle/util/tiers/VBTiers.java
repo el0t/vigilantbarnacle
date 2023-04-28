@@ -9,9 +9,9 @@ public class VBTiers {
 
     public static final ForgeTier VBEARLY = new ForgeTier(2,780,7,2.5F,10,
             VBBlockTags.ORICHALCUM, () -> Ingredient.of(ItemInit.ORICHALCUM.get()));
-    public static final ForgeTier VBMID = new ForgeTier(3,1561,9,3.5F,13,
+    public static final ForgeTier ORICHALCUM = new ForgeTier(3,1561,9,3.5F,13,
             VBBlockTags.ORICHALCUM, () -> Ingredient.of(ItemInit.ORICHALCUM.get()));
-    public static final ForgeTier VBLATE = new ForgeTier(4,2343,11,4.0F,16,
+    public static final ForgeTier UBER_ORICHALCUM = new ForgeTier(4,2343,11,4.0F,16,
             VBBlockTags.ORICHALCUM, () -> Ingredient.of(ItemInit.ORICHALCUM.get()));
     public static final ForgeTier VBSUPER = new ForgeTier(4,2343,10,5.0F,19,
             VBBlockTags.ORICHALCUM, () -> Ingredient.of(ItemInit.ORICHALCUM.get()));
