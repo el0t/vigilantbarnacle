@@ -3,7 +3,6 @@ package io.github.el0t.vigilantbarnacle.util.tags;
 import io.github.el0t.vigilantbarnacle.VigilantBarnacle;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.tags.EntityTypeTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;

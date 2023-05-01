@@ -16,7 +16,6 @@ import java.util.List;
 
 public class DreamBladeItem extends SwordItem {
     private final int duration;
-    private final String tooltip = "Levitates enemies";
     public DreamBladeItem(Tier p_43269_, int p_43270_, float p_43271_, Properties p_43272_, int duration) {
         super(p_43269_, p_43270_, p_43271_, p_43272_);
         this.duration = duration;
@@ -28,7 +27,7 @@ public class DreamBladeItem extends SwordItem {
     }
     @Override
     public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> componentList, TooltipFlag flag) {
-        componentList.add(Component.literal(tooltip).withStyle(ChatFormatting.DARK_GREEN));
+        componentList.add(Component.literal("Levitates enemies").withStyle(ChatFormatting.DARK_GREEN));
         super.appendHoverText(stack, level, componentList, flag);
     }
 }

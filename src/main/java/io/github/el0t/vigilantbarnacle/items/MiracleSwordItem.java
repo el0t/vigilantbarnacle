@@ -15,12 +15,12 @@ import org.jetbrains.annotations.Nullable;
 import java.util.List;
 
 public class MiracleSwordItem extends SwordItem {
-    private int healing;
-    private String tooltip;
+    private final int healing;
+    private final String tooltip;
     public MiracleSwordItem(Tier p_43269_, int p_43270_, float p_43271_, Properties p_43272_, int healing) {
         super(p_43269_, p_43270_, p_43271_, p_43272_);
         this.healing = healing;
-        tooltip = "Heals "+Integer.toString(this.healing)+" on hit";
+        tooltip = "Heals "+ this.healing + " on hit";
     }
     @Override
     public boolean hurtEnemy(ItemStack weapon, LivingEntity target, LivingEntity attacker) {
