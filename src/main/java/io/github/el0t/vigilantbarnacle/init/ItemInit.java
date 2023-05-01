@@ -2,6 +2,7 @@ package io.github.el0t.vigilantbarnacle.init;
 
 import io.github.el0t.vigilantbarnacle.VigilantBarnacle;
 import io.github.el0t.vigilantbarnacle.items.DreamBladeItem;
+import io.github.el0t.vigilantbarnacle.items.HolySwordItem;
 import io.github.el0t.vigilantbarnacle.items.MiracleSwordItem;
 import io.github.el0t.vigilantbarnacle.util.tiers.VBTiers;
 import net.minecraft.world.item.*;
@@ -27,4 +28,6 @@ public class ItemInit {
             () -> new MiracleSwordItem(VBTiers.UBER_ORICHALCUM, 3, -2.4F, new Item.Properties().rarity(Rarity.RARE), 1));
     public static final RegistryObject<DreamBladeItem> DREAM_BLADE = ITEMS.register("dream_blade",
             () -> new DreamBladeItem(VBTiers.ORICHALCUM, 3, -2.0F, new Item.Properties().rarity(Rarity.UNCOMMON), 54));
+    public static final RegistryObject<HolySwordItem> ZOMBIESBANE = ITEMS.register("zombiesbane",
+            () -> new HolySwordItem(VBTiers.ORICHALCUM, 3, -2.0F, new Item.Properties().rarity(Rarity.UNCOMMON), 2));
 }
