@@ -27,7 +27,8 @@ import org.slf4j.Logger;
 public class VigilantBarnacle
 {
     public static final String MODID = "vigilantbarnacle";
-    public static CreativeModeTab tab;
+    public static CreativeModeTab tab1;
+    public static CreativeModeTab tab2;
     private static final Logger LOGGER = LogUtils.getLogger();
 
     public VigilantBarnacle()
@@ -57,13 +58,28 @@ public class VigilantBarnacle
     }
 
     private void registerTabs(CreativeModeTabEvent.Register event){
-        tab = event.registerCreativeModeTab(new ResourceLocation(MODID, "tab1"), builder -> builder
+        tab1 = event.registerCreativeModeTab(new ResourceLocation(MODID, "tab1"), builder -> builder
                 .icon(() -> new ItemStack(ItemInit.ORICHALCUM.get()))
                 .title(Component.translatable("tabs.vigilantbarnacle.tab1"))
                 .displayItems((featureFlags, output) -> {
                     output.accept(ItemInit.ORICHALCUM.get());
                     output.accept(BlockInit.ORICHALCUM_BLOCK.get());
                     output.accept(ItemInit.YGGDRASIL_LEAF.get());
+                }));
+        tab2 = event.registerCreativeModeTab(new ResourceLocation(MODID, "tab2"), builder -> builder
+                .icon(() -> new ItemStack(ItemInit.UBER_MIRACLE_SWORD.get()))
+                .title(Component.translatable("tabs.vigilantbarnacle.tab2"))
+                .displayItems((featureFlags, output) -> {
+                    output.accept(ItemInit.CYPRESS_STICK.get());
+                    output.accept(ItemInit.SOLDIERS_SWORD.get());
+                    output.accept(ItemInit.STEEL_BROADSWORD.get());
+                    output.accept(ItemInit.TEMPLARS_SWORD.get());
+                    output.accept(ItemInit.RAPIER.get());
+                    output.accept(ItemInit.MIRACLE_SWORD.get());
+                    output.accept(ItemInit.UBER_MIRACLE_SWORD.get());
+                    output.accept(ItemInit.DREAM_BLADE.get());
+                    output.accept(ItemInit.ZOMBIESBANE.get());
+                    output.accept(ItemInit.ZOMBIE_SLAYER.get());
                 }));
     }
     private void addCreative(CreativeModeTabEvent.BuildContents event)

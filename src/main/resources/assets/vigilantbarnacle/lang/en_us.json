@@ -1,5 +1,6 @@
 {
-  "tabs.vigilantbarnacle.tab1": "VigilantBarnacle",
+  "tabs.vigilantbarnacle.tab1": "VB Items",
+  "tabs.vigilantbarnacle.tab2": "VB Weapons",
   "item.vigilantbarnacle.orichalcum": "Orichalcum",
   "block.vigilantbarnacle.orichalcum_block": "Orichalcum Block",
   "item.vigilantbarnacle.yggdrasil_leaf": "Yggdrasil Leaf",
@@ -11,5 +12,6 @@
   "item.vigilantbarnacle.miracle_sword": "Miracle Sword",
   "item.vigilantbarnacle.uber_miracle_sword": "Uber Miracle Sword",
   "item.vigilantbarnacle.dream_blade": "Dream Blade",
-  "item.vigilantbarnacle.zombiesbane": "Zombiesbane"
+  "item.vigilantbarnacle.zombiesbane": "Zombiesbane",
+  "item.vigilantbarnacle.zombie_slayer": "Zombie Slayer"
 }

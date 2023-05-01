@@ -17,9 +17,9 @@ public class ItemInit {
     public static final RegistryObject<Item> YGGDRASIL_LEAF = ITEMS.register("yggdrasil_leaf", () -> new Item(new Item.Properties().rarity(Rarity.RARE)));
 
     public static final RegistryObject<SwordItem> CYPRESS_STICK = ITEMS.register("cypress_stick",
-            () -> new SwordItem(Tiers.WOOD, 1, 3.5F, new Item.Properties()));  //tier, attack_damage, attack_speed, props
+            () -> new SwordItem(Tiers.WOOD, 1, 3.0F, new Item.Properties()));  //tier, attack_damage, attack_speed, props
     public static final RegistryObject<SwordItem> SOLDIERS_SWORD = ITEMS.register("soldiers_sword", () -> new SwordItem(Tiers.IRON, 3, -2.4F, new Item.Properties()));
-    public static final RegistryObject<SwordItem> RAPIER = ITEMS.register("rapier", () -> new SwordItem(Tiers.IRON, 3, 2.0F, new Item.Properties()));
+    public static final RegistryObject<SwordItem> RAPIER = ITEMS.register("rapier", () -> new SwordItem(Tiers.IRON, 3, 1.5F, new Item.Properties()));
     public static final RegistryObject<SwordItem> STEEL_BROADSWORD = ITEMS.register("steel_broadsword", () -> new SwordItem(Tiers.IRON, 4, -2.8F, new Item.Properties()));
     public static final RegistryObject<SwordItem> TEMPLARS_SWORD = ITEMS.register("templars_sword", ()-> new SwordItem(Tiers.IRON, 3, -2.4F, new Item.Properties()));
     public static final RegistryObject<MiracleSwordItem> MIRACLE_SWORD = ITEMS.register("miracle_sword",
@@ -29,5 +29,7 @@ public class ItemInit {
     public static final RegistryObject<DreamBladeItem> DREAM_BLADE = ITEMS.register("dream_blade",
             () -> new DreamBladeItem(VBTiers.ORICHALCUM, 3, -2.0F, new Item.Properties().rarity(Rarity.UNCOMMON), 54));
     public static final RegistryObject<HolySwordItem> ZOMBIESBANE = ITEMS.register("zombiesbane",
-            () -> new HolySwordItem(VBTiers.ORICHALCUM, 3, -2.0F, new Item.Properties().rarity(Rarity.UNCOMMON), 2));
+            () -> new HolySwordItem(VBTiers.ORICHALCUM, 3, -2.4F, new Item.Properties().rarity(Rarity.UNCOMMON), 10));
+    public static final RegistryObject<HolySwordItem> ZOMBIE_SLAYER = ITEMS.register("zombie_slayer",
+            () -> new HolySwordItem(VBTiers.UBER_ORICHALCUM, 3, -2.4F, new Item.Properties().rarity(Rarity.RARE),10));
 }
