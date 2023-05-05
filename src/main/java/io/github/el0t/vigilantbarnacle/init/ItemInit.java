@@ -5,6 +5,7 @@ import io.github.el0t.vigilantbarnacle.items.DreamBladeItem;
 import io.github.el0t.vigilantbarnacle.items.HolySwordItem;
 import io.github.el0t.vigilantbarnacle.items.MiracleSwordItem;
 import io.github.el0t.vigilantbarnacle.util.tiers.VBTiers;
+import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.*;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -15,7 +16,13 @@ public class ItemInit {
 
     public static final RegistryObject<Item> ORICHALCUM = ITEMS.register("orichalcum", () -> new Item(new Item.Properties().rarity(Rarity.UNCOMMON)));
     public static final RegistryObject<Item> YGGDRASIL_LEAF = ITEMS.register("yggdrasil_leaf", () -> new Item(new Item.Properties().rarity(Rarity.RARE)));
+    public static final RegistryObject<Item> NOOK_GRASS = ITEMS.register("nook_grass", () -> new Item(new Item.Properties()
+                    .food(new FoodProperties.Builder().nutrition(2).saturationMod(1.0F).build())));
+    public static final RegistryObject<Item> NOOK_SEEDS = ITEMS.register("nook_seeds", () -> new ItemNameBlockItem(BlockInit.NOOK_GRASS_CROP.get(), new Item.Properties()
+                    .food(new FoodProperties.Builder().nutrition(1).saturationMod(1.0F).build())));
 
+
+    //todo make burning nook grass
     public static final RegistryObject<SwordItem> CYPRESS_STICK = ITEMS.register("cypress_stick",
             () -> new SwordItem(Tiers.WOOD, 1, 3.0F, new Item.Properties()));  //tier, attack_damage, attack_speed, props
     public static final RegistryObject<SwordItem> SOLDIERS_SWORD = ITEMS.register("soldiers_sword", () -> new SwordItem(Tiers.IRON, 3, -2.4F, new Item.Properties()));

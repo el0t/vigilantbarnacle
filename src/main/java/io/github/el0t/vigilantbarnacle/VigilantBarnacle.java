@@ -4,6 +4,8 @@ import com.mojang.logging.LogUtils;
 import io.github.el0t.vigilantbarnacle.init.BlockInit;
 import io.github.el0t.vigilantbarnacle.init.ItemInit;
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.renderer.ItemBlockRenderTypes;
+import net.minecraft.client.renderer.RenderType;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.*;
@@ -64,6 +66,8 @@ public class VigilantBarnacle
                     output.accept(ItemInit.ORICHALCUM.get());
                     output.accept(BlockInit.ORICHALCUM_BLOCK.get());
                     output.accept(ItemInit.YGGDRASIL_LEAF.get());
+                    output.accept(ItemInit.NOOK_GRASS.get());
+                    output.accept(ItemInit.NOOK_SEEDS.get());
                 }));
         tab2 = event.registerCreativeModeTab(new ResourceLocation(MODID, "tab2"), builder -> builder
                 .icon(() -> new ItemStack(ItemInit.UBER_MIRACLE_SWORD.get()))
@@ -80,6 +84,7 @@ public class VigilantBarnacle
                     output.accept(ItemInit.ZOMBIESBANE.get());
                     output.accept(ItemInit.ZOMBIE_SLAYER.get());
                 }));
+        //todo there must be another way
     }
     private void addCreative(CreativeModeTabEvent.BuildContents event)
     {
@@ -104,9 +109,7 @@ public class VigilantBarnacle
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event)
         {
-            // Some client setup code
-            LOGGER.info("HELLO FROM CLIENT SETUP");
-            LOGGER.info("MINECRAFT NAME >> {}", Minecraft.getInstance().getUser().getName());
+           // ItemBlockRenderTypes.setRenderLayer(BlockInit.NOOK_GRASS_CROP.get(), RenderType.cutout());
         }
     }
 }
